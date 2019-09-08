@@ -1,3 +1,8 @@
+// TODO: Implement _throttle
+// TODO: Move input into separate component
+// TODO: More detailed proptypes
+// TODO: Move fetchData into separate hook
+
 import React, { useEffect } from "react";
 import axios from "axios";
 import Results from "./Results";
