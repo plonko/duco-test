@@ -35,7 +35,12 @@ const Films = props => {
       : null;
   }
 
-  return renderResultList();
+  return (
+    <>
+      <strong>Films</strong>
+      {renderResultList()}
+    </>
+  );
 };
 
 Films.propTypes = {
