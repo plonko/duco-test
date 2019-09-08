@@ -1,34 +1,32 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 
 const Results = props => {
   const { data } = props;
 
-  const renderResult = data => {
+  function renderResult(data) {
     const { name, birth_year, gender } = data;
 
     return (
-      <Fragment key={name}>
-        <h6 className="dropdown-header">{name}</h6>
-        <div className="dropdown-item">
+      <div className="card-body" key={name}>
+        <h5 className="card-title">{name}</h5>
+        <p className="card-text">
           <strong>DOB:</strong> {birth_year}
-        </div>
-        <span className="dropdown-item">
+        </p>
+        <p className="card-text">
           <strong>Gender:</strong> {gender}
-        </span>
-      </Fragment>
+        </p>
+      </div>
     );
-  };
+  }
 
-  const getClassName = classNames({
-    "dropdown-menu": true,
-    show: data.length
-  });
+  function renderCard() {
+    return data && data.length ? (
+      <div className="card">{data.map(item => renderResult(item))}</div>
+    ) : null;
+  }
 
-  return (
-    <div className={getClassName}>{data.map(item => renderResult(item))}</div>
-  );
+  return renderCard();
 };
 
 Results.propTypes = {
