@@ -36,7 +36,7 @@ const Typeahead = () => {
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
-      <Results data={data} />
+      <Results data={data.results} />
     </>
   );
 };
