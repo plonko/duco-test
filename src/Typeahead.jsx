@@ -2,32 +2,34 @@ import React, { useEffect } from "react";
 import axios from "axios";
 
 const Typeahead = () => {
+  const [query, setQuery] = React.useState("");
   const [data, setData] = React.useState([]);
 
-  const fetchData = () => {
-    console.log("hey");
-    return axios
-      .get("https://swapi.co/api/people/", {
-        params: {
-          format: "json",
-          search: "r2"
-        }
-      })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => console.log(error));
-    // .then(response => setData(response));
-  };
+  useEffect(() => {
+    const fetchData = () => {
+      return axios
+        .get("https://swapi.co/api/people/", {
+          params: {
+            format: "json",
+            search: query
+          }
+        })
+        .then(({ data }) => {
+          setData(data);
+          console.log(data);
+        })
+        .catch(error => console.log(error));
+    };
+
+    if (query.length > 2) {
+      fetchData();
+    }
+  }, [query]);
 
   return (
-    <button
-      type="button"
-      onClick={() => fetchData()}
-      className="btn btn-primary"
-    >
-      Primary
-    </button>
+    <>
+      <input value={query} onChange={e => setQuery(e.target.value)} />
+    </>
   );
 };
 
