@@ -1,33 +1,3 @@
-Skip to content
-Using Gmail with screen readers
-duco
-
-Conversations
-Take home project with Duco
-Inbox
-x
-
-Orestis Tsapogas <orestis.tsapogas@du.co>
-Attachments
-16 Aug 2019, 17:58
-to me
-
-Images are not displayed. Display images below - Always display images from orestis.tsapogas@du.co
-Hey Sebastian!
-
-It was great chatting with you today!
-
-As mentioned on the phone, I am sending you over our front-end take home project!
-
-I've attached a readme with the problem description, it involves Star Wars :) I hope the instructions in the readme are sufficient but if you have any questions, don't hesitate to ask!
-
-There is no set deadline for this but we suggest you complete it over the next week.
-
-Best of luck!
-
-Attachments area
-Awesome, thank you so much!This is great, thank you so much!Thank you so much!
-
 ### Star Wars Character Search
 
 The Star Wars API [ https://swapi.co/ ] offers searchable information about Star Wars characters, and other objects.
@@ -59,5 +29,3 @@ We'll discuss your solution during the in-person interview.
 Don't hesitate to ask if you have any questions about the task.
 
 Happy coding!
-duco_challenge_1.0.md
-Displaying duco_challenge_1.0.md.
