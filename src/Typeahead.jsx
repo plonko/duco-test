@@ -2,14 +2,15 @@
 // TODO: Move input into separate component
 // TODO: More detailed proptypes
 // TODO: Move fetchData into separate hook
+// TODO: Deal with paginated results
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 
 const Typeahead = () => {
-  const [query, setQuery] = React.useState("");
-  const [data, setData] = React.useState([]);
+  const [query, setQuery] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -22,7 +23,6 @@ const Typeahead = () => {
         })
         .then(({ data }) => {
           setData(data);
-          console.log(data);
         })
         .catch(error => console.log(error));
     };

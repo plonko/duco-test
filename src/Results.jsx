@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Films from "./Films";
 const Results = props => {
   const { data } = props;
 
   function renderResult(data) {
-    const { name, birth_year, gender } = data;
+    const { name, birth_year, gender, films } = data;
 
     return (
       <div className="card-body" key={name}>
@@ -16,6 +16,7 @@ const Results = props => {
         <p className="card-text">
           <strong>Gender:</strong> {gender}
         </p>
+        <Films films={films} />
       </div>
     );
   }
