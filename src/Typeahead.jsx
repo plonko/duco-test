@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import Results from "./Results";
 
 const Typeahead = () => {
   const [query, setQuery] = React.useState("");
@@ -28,7 +29,14 @@ const Typeahead = () => {
 
   return (
     <>
-      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <input
+        className="form-control"
+        type="text"
+        placeholder="Search"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+      />
+      <Results data={data} />
     </>
   );
 };
