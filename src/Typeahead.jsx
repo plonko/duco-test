@@ -22,7 +22,9 @@ const Typeahead = () => {
         .catch(error => console.log(error));
     };
 
-    if (query.length > 2) {
+    if (query.length === 0) {
+      setData([]);
+    } else if (query.length > 2) {
       fetchData();
     }
   }, [query]);
