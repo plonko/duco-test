@@ -1,7 +1,7 @@
 // TODO: Implement _throttle
+// TODO: Move fetchData into separate function/hook
 // TODO: Move input into separate component
 // TODO: More detailed proptypes
-// TODO: Move fetchData into separate hook
 // TODO: Deal with paginated results
 
 import React, { useEffect, useState } from "react";

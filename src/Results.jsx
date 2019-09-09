@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Films from "./Films";
+
 const Results = props => {
   const { data } = props;
 
@@ -16,7 +17,7 @@ const Results = props => {
         <p className="card-text">
           <strong>Gender:</strong> {gender}
         </p>
-        <Films films={films} />
+        {films ? <Films films={films} /> : null}
       </div>
     );
   }
